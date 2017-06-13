@@ -24,6 +24,8 @@ COPY .tmux.conf /root/
 COPY console-setup /etc/default/
 RUN mkdir /root/.fonts
 RUN pip install powerline-status
+RUN wget -O PowerlineSymbols.otf https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf
+RUN wget -O 10-powerline-symbols.conf https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
 COPY PowerlineSymbols.otf /root/.fonts
 COPY 10-powerline-symbols.conf /etc/fonts/conf.d/
 RUN fc-cache -vf /etc/fonts/conf.d/
