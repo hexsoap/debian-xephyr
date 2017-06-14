@@ -17,6 +17,9 @@ RUN apt-get install -y -q -o Dpkg::Options::="--force-confdef" -o Dpkg::Options:
   i3blocks \
   xserver-xephyr \
   xpra \
+  dbus-x11 \
+  xterm \
+  pulseaudio \
 	&& rm -rf /var/lib/apt/lists/* && rm -rf /var/cache/apt/archives
 COPY .oh-my-zsh /root/.oh-my-zsh
 COPY .zsh* /root/
